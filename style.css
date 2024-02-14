@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #201F29;
+    color: #eee;
+}
+
+header nav {
+    background-color: #2C3244;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+}
+
+form input[type='text'] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+form input[type='text'], button[type='submit'] {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: .3rem 1.5rem;
+    border-radius: 100px;
+}
+
+button[type='submit'] {
+    color: #eef;
+    background-color: #4C43CD;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+  }
+
+  button[type='submit']:hover {
+    background-color: #342bad;
+  }
+
+
+/* ------------------------------- *\
+    MAIN
+/* ------------------------------- */
+
+main{
+    margin-top: 80px;
+}
+
+
+.recipe-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /* display: flex;
+    flex-wrap: wrap; */
+    grid-gap: 40px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    place-items: center;
+}
+
+.recipe {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #111;
+    border-radius: 8px;
+    box-shadow: 0 1px 15px #111, -3px -2px 20px #111;
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: 24px;
+    margin-block: 5px;
+}
+
+.recipe p {
+    font-size: 20px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.recipe span {
+    font-weight: 600;
+}
+
+.recipe button {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(178, 89, 5);
+    color: #eee;
+    margin: 18px auto;
+    border: none;
+    transition: background-color .2s ease-in-out;
+}
+
+.recipe button:hover{
+    background-color: rgb(189, 99, 15);
+}
+
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background: #201F29;
+    border-radius: 10px;
+    width: 60%;
+    height: 60%;
+    padding: 30px;
+    font-size: 20px;
+    overflow: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.recipe-details-content ul li {
+    list-style: none;
+}
+
+/* Adding scroll bar */
+.recipe-details::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #3d3b51;
+    border-radius: 10px;
+    --webkit-border-radius: 16px;
+}
+
+.recipe-details-content {
+    line-height: 2rem;
+}
+
+.recipe-details-content h3{
+    margin: 8px 0;
+    color: rgb(215, 108, 8);
+}
+
+.recipe-closebtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(178, 89, 5);
+    color: #eee;
+    padding: 5px 8px;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+/* ------------------------------- *\
+    Mobile Device
+/* ------------------------------- */
+@media screen and (max-width: 675px) {
+    header nav {
+        flex-direction: column;
+    }
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+    main{
+        margin-top: 130px;
+    }
+}
