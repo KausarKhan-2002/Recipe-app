@@ -4,10 +4,10 @@ let recipeContainer = document.querySelector(".recipe-container");
 let recipeDetailsContent = document.querySelector(".recipe-details-content");
 let recipeClosebtn = document.querySelector(".recipe-closebtn");
 
-// Original link
+// Original URL
 // "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
 
-// Modified link
+// Modified URL
 const URL = "https://www.themealdb.com/api/json/v1/1/search.php?s";
 
 // Fetch Ingridients
